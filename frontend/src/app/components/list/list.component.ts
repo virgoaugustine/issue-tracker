@@ -11,7 +11,7 @@ export class ListComponent implements OnInit {
   constructor(private issueService: IssueService) { }
 
   ngOnInit(): void {
-    this.issueService.getIssues().subscribe((issues) => console.log(issues));
+    this.issueService.getIssues().subscribe((issues) => console.log(issues))
   }
 
 }
