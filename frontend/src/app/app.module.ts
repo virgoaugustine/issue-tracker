@@ -12,9 +12,11 @@ import { ListComponent } from './components/list/list.component';
 import { CreateComponent } from './components/create/create.component';
 import { EditComponent } from './components/edit/edit.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 const routes: Routes = [
   {path: 'create', component: CreateComponent},
-  {path: 'edit', component: EditComponent},
+  {path: 'edit/:id', component: EditComponent},
   {path: 'list', component: ListComponent},
   {path: '', redirectTo: 'list', pathMatch: 'full' }
 
@@ -31,6 +33,7 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule, 
     MaterialModule
