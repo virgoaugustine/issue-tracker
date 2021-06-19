@@ -31,12 +31,13 @@ export class IssueService {
 
   }
 
-  updateIssue(id:any,title: string, responsible: string, description: string, severity: string) {
+  updateIssue(id:any,title: string, responsible: string, description: string, severity: string, status: string) {
     const issue = {
       title: title,
       responsible: responsible,
       description: description,
-      severity: severity
+      severity: severity,
+      status: status
     };
     return this.http.post(`${this.uri}/issues/update/${id}`, issue);
 

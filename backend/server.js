@@ -54,7 +54,7 @@ router.route('/issues/update/:id').post((req, res) => {
             issue.status = req.body.status;
 
             issue.save()
-            .then(issue => res.status(200).send('Update successful.'))
+            .then(issue => res.status(200).send({"message":"update successful"}))
             .catch(err => res.status(400).send('update failed'))
         }
     });
